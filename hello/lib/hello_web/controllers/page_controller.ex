@@ -2,6 +2,9 @@ defmodule HelloWeb.PageController do
   use HelloWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    conn
+    |> put_layout("admin.html")
+    |> render("index.html")
+    # render(conn, "index.html")
   end
 end
