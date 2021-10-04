@@ -1,6 +1,59 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
+* {
+  box-sizing: border-box;
+  max-width: 60ch;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body,
+div,
+header,
+nav,
+menu,
+main,
+footer {
+  max-width: none;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 9fr;
+  height: 100vh;
+}
+
+menu {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background-color: #6741d9;
+  color: white;
+  /* default ? */
+  /* min-height: fit-content; */
+}
+
+nav {
+  grid-column: 1;
+  padding: 2ch;
+  border-right:0.2rem solid #f8f9fa;
+}
+
+main {
+  grid-column: 2;
+  padding: 2ch;
+}
+
+aside {
+  grid-column: 3;
+  background-color: yellow;
+  padding: 2ch;
+}
+
+
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
